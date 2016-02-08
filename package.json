@@ -1,37 +1,50 @@
 {
-  "name": "react-json-editor",
-  "version": "0.2.0",
-  "description": "A React dynamic form component for react using JSON-Schema.",
-  "scripts": {
-    "start": "node server.js",
-    "gh-pages": "webpack --config ./config/webpack.gh-pages.js",
-    "deploy-gh-pages": "scripts/deploy.sh",
-    "dist": "webpack --config ./config/webpack.dist.js && webpack --config ./config/webpack.dist.min.js",
-    "test": "jest"
-  },
-  "keywords": [
-    "JSON-Schema",
-    "jsonschema",
-    "react",
-    "react-form",
-    "react-component",
-    "form",
-    "json-editor"
+  "_args": [
+    [
+      "github:joshgagnon/react-json-editor",
+      "/Users/josh/template-law"
+    ]
   ],
-  "homepage": "https://github.com/ismaelga/react-json-editor",
+  "_from": "joshgagnon/react-json-editor",
+  "_id": "react-json-editor@0.2.0",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/react-json-editor",
+  "_phantomChildren": {},
+  "_requested": {
+    "hosted": {
+      "directUrl": "https://raw.githubusercontent.com/joshgagnon/react-json-editor/master/package.json",
+      "gitUrl": "git://github.com/joshgagnon/react-json-editor.git",
+      "httpsUrl": "git+https://github.com/joshgagnon/react-json-editor.git",
+      "shortcut": "github:joshgagnon/react-json-editor",
+      "ssh": "git@github.com:joshgagnon/react-json-editor.git",
+      "sshUrl": "git+ssh://git@github.com/joshgagnon/react-json-editor.git",
+      "type": "github"
+    },
+    "name": null,
+    "raw": "github:joshgagnon/react-json-editor",
+    "rawSpec": "github:joshgagnon/react-json-editor",
+    "scope": null,
+    "spec": "github:joshgagnon/react-json-editor",
+    "type": "hosted"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "git://github.com/joshgagnon/react-json-editor.git#b516e391b2fda6e7f1759c25fe079877ad0f85ca",
+  "_shasum": "bc319b776b4aa6ed43920423773c27cb69ff8bb3",
+  "_shrinkwrap": null,
+  "_spec": "github:joshgagnon/react-json-editor",
+  "_where": "/Users/josh/template-law",
+  "author": {
+    "email": "ismaelga@gmail.com",
+    "name": "Ismael Abreu"
+  },
   "bugs": {
     "url": "https://github.com/ismaelga/react-json-editor/issues"
   },
-  "license": "MIT",
-  "author": {
-    "name": "Ismael Abreu",
-    "email": "ismaelga@gmail.com"
-  },
-  "main": "dist/react-json-editor.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ismaelga/react-json-editor.git"
-  },
+  "dependencies": {},
+  "description": "A React dynamic form component for react using JSON-Schema.",
   "devDependencies": {
     "babel-jest": "^6.0.1",
     "babel-preset-react": "^6.3.13",
@@ -45,26 +58,55 @@
     "marked": "^0.3.3",
     "purecss": "^0.5.0",
     "react": ">=0.12.2 <1.0.0",
-    "react-ghfork": "^0.3.0",
-    "react-hot-loader": "^1.1.6",
     "react-addons-test-utils": "^0.14.6",
     "react-dom": "^0.14.6",
+    "react-ghfork": "^0.3.0",
+    "react-hot-loader": "^1.1.6",
     "style-loader": "^0.8.3",
     "url-loader": "^0.5.5",
     "webpack": "^1.6.0",
     "webpack-dev-server": "^1.7.0",
     "xtend": "^4.0.0"
   },
+  "gitHead": "b516e391b2fda6e7f1759c25fe079877ad0f85ca",
+  "homepage": "https://github.com/ismaelga/react-json-editor",
   "jest": {
-    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
-    "unmockedModulePathPatterns": [
-      "<rootDir>/node_modules/react",
-      "<rootDir>/node_modules/react-dom",
-      "<rootDir>/node_modules/react-addons-test-utils",
-      "<rootDir>/node_modules/fbjs"
-    ],
     "modulePathIgnorePatterns": [
       "<rootDir>/node_modules/"
+    ],
+    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/fbjs",
+      "<rootDir>/node_modules/react",
+      "<rootDir>/node_modules/react-addons-test-utils",
+      "<rootDir>/node_modules/react-dom"
     ]
-  }
+  },
+  "keywords": [
+    "JSON-Schema",
+    "form",
+    "json-editor",
+    "jsonschema",
+    "react",
+    "react-component",
+    "react-form"
+  ],
+  "license": "MIT",
+  "main": "dist/react-json-editor.js",
+  "name": "react-json-editor",
+  "optionalDependencies": {},
+  "readme": "# react-json-editor\n\n#### This is a fork of *plexus-form* with the intent to keep it maintained\n\nA dynamic form component for [React](http://facebook.github.io/react/) using a\nspecification format based on [JSON-Schema](http://json-schema.org/).\n\n#### **[Demo](http://ismaelga.github.io/react-json-editor/)**\n\nThe full code for the demo can be found at\nhttps://github.com/ismaelga/react-json-editor/blob/master/demos/demo.jsx.\n\nreact-json-editor takes a JavaScript object describing the shape of the data we want\na user to provide - a *schema* - and automatically creates a form based on\nthat schema. It also validates user inputs using the same schema.\n\n## Contributions are welcome\n\nI'm happy to accept PRs. You can pick up a TODO from https://github.com/ismaelga/react-json-editor/issues/1 if you want to help but don't know how.\n\n## Minimal example:\n\n```js\n    var React    = require('react');\n    var Form     = require('react-json-editor');\n\n    var schema = {\n      title      : \"My pretty form\",\n      description: \"Declarative pure data DSLs are the best.\",\n      type       : \"object\",\n      properties : {\n        comment: {\n          title      : \"Your comment\",\n          description: \"Type something here.\",\n          type       : \"string\",\n          minLength  : 1\n        }\n      }\n    };\n\n    var onSubmit = function(data, buttonValue, errors) {\n      alert('Data  : '+JSON.stringify(data)+'\\n'+\n            'Button: '+buttonValue+'\\n'+\n            'Errors: '+JSON.stringify(errors));\n    };\n\n    React.render(<Form\n                   schema   = {schema}\n                   onSubmit = {onSubmit} />,\n                 document.body);\n```\n\n\n## Differences between JSON-Schema and react-json-editor schemas:\n\nreact-json-editor take a plain JavaScript data object as input rather than a JSON-formatted\nstring.\n\nThe following JSON-Schema properties are supported:\n\n  - `description`\n  - `enum`\n  - `enumNames`\n  - `items`\n  - `oneOf`\n  - `properties`\n  - `title`\n  - `type`\n  - `$ref`\n\nAdditional properties relevant to data validation are implemented by\nplexus-validate.\n\nJSON-Schema references can only point to elements within the schema object\nitself. URI references are not supported.\n\nreact-json-editor extends the JSON-Schema specification with two new properties\n`x-hints` and `x-ordering`. The latter, `x-ordering`, specifies a default\norder for the elements under the current object. The former, `x-hints`, can be\nused to annotate a schema with additional hints on how the data is to be\nhandled or displayed. The relevant pieces of information for react-json-editor are\nfound under `schema[\"x-hints\"].form`. We'll explore these extension in more\ndetail in the following sections.\n\n\n## Enforced display order example:\n```js\n    var schema = {\n      type      : \"object\",\n      properties: {\n        comment: { title: \"Comment\" },\n        email  : { title: \"Email\" },\n        name   : { title: \"Name\" }\n      },\n      \"x-ordering\": [\"name\", \"email\", \"comment\"]\n    };\n```\n\n\n## Custom CSS classes example:\n\nreact-json-editor assigns the following CSS classes automatically:\n\n- `form-section`\n- `form-subsection`\n- `form-section-title`\n- `form-element`\n\nAdditional CSS classes can be specified via `x-hints` like so:\n```js\n    var schema = {\n      type      : \"object\",\n      properties: {\n        name : {\n          title: \"Name\",\n          \"x-hints\": {\n            form: {\n              classes: [ \"form-text-field\", \"form-name-field\" ]\n            }\n          }\n        },\n        email: {\n          title: \"Email\",\n          \"x-hints\": {\n            form: {\n              classes: [ \"form-text-field\", \"form-email-field\" ]\n            }\n          }\n        }\n      },\n      \"x-hints\": {\n        form: {\n          classes: [ \"form-person-section\" ]\n        }\n      }\n    };\n```\n\n## Alternatives selection example:\n```js\n    var schema = {\n      type      : \"object\",\n      properties: {\n        contact: {\n          title      : \"Contact details\",\n          description: \"How would you like to be contacted?\",\n          type       : \"object\",\n          properties : {\n            contactType: {\n              title      : \"Contact medium\",\n              description: \"Please pick your preferred medium\"\n            }\n          },\n          oneOf: [\n            {\n              properties: {\n                contactType: { enum: [ \"Email\" ] },\n                email      : { title: \"Email address\" }\n              }\n            },\n            {\n              properties: {\n                contactType: { enum: [ \"Telephone\" ] },\n                phoneNumber: { title: \"Telephone number\" }\n              }\n            },\n            {\n              properties: {\n                contactType: { enum: [ \"Physical mail\" ] },\n                address    : { title: \"Street address\" },\n                postcode   : { title: \"Post or area code\" },\n                state      : { title: \"State or province\" },\n                country    : { title: \"Country\" }\n              }\n            }\n          ],\n          \"x-hints\": { form: { selector: \"contactType\" } }\n        }\n      }\n    };\n```\n\n## User-defined input component example:\n\nThe following example shows how to associate a user-defined input handler with\na data element. The association happens indirectly via a symbolic name and a\n`handler` object that assigns functions to names so that the schema itself\nremains easily serializable. We use a very simplistic file uploader component\nas a demonstration case. Other useful applications of these technique could be\nan autocompleting text field or a color picker.\n\nThe React component handling a data element (here `Uploader`) must call\n`this.props.onChange` whenever the data has changed. It should delegate\nlow-level key press events it does not handle itself to\n`this.props.onKeyPress`, which enables the `<Form>` component to handle the\n\"Enter\" key consistently throughout the form.\n```js\n    var schema = {\n      \"x-hints\" : {\n        form: {\n          inputComponent: \"uploader\"\n        }\n      }\n    };\n\n    var Uploader = React.createClass({\n      componentDidMount: function() {\n        var input = document.createElement('input');\n        input.type = 'file';\n        input.multiple = false;\n        input.addEventListener('change', this.loadFile);\n        this._input = input;\n      },\n\n      loadFile: function(event) {\n        var files = event.target.files;\n        var handleData = this.handleData;\n        var file = files[0];\n        var reader = new FileReader();\n\n        reader.onload = function(event) {\n          handleData(file, event.target.result);\n        };\n\n        reader.readAsText(file);\n      },\n\n      handleData: function(file, data) {\n        this.props.onChange({\n          name: file.name,\n          type: file.type,\n          size: file.size,\n          data: data.slice(0, 1000) // truncate data in this demo\n        });\n      },\n\n      openSelector: function() {\n        this._input.click();\n      },\n\n      handleKeyPress: function(event) {\n        this.props.onKeyPress(event);\n      },\n\n      render: function() {\n        return (\n          <button onClick = { this.openSelector }>\n            Select a file\n          </button>\n        );\n      }\n    });\n\n    var onSubmit = function(data, buttonValue, errors) {\n      alert('Data  : '+JSON.stringify(data)+'\\n'+\n            'Button: '+buttonValue+'\\n'+\n            'Errors: '+JSON.stringify(errors));\n    };\n\n    var handlers = {\n      uploader: Uploader\n    };\n\n    React.render(<Form\n                   buttons  = {[]}\n                   schema   = {schema}\n                   onSubmit = {onSubmit}\n                   handlers = {handlers}\n                   submitOnChange = {true} />,\n                 document.body);\n```\n\n# License\n\nThe MIT License (MIT)\n\nCopyright (c) 2015 The Australian National University\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ismaelga/react-json-editor.git"
+  },
+  "scripts": {
+    "deploy-gh-pages": "scripts/deploy.sh",
+    "dist": "webpack --config ./config/webpack.dist.js && webpack --config ./config/webpack.dist.min.js",
+    "gh-pages": "webpack --config ./config/webpack.gh-pages.js",
+    "start": "node server.js",
+    "test": "jest"
+  },
+  "version": "0.2.0"
 }
